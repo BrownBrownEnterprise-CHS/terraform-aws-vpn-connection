@@ -21,9 +21,15 @@ variable "customer_gateway_bgp_asn" {
   type        = number
   description = "The Customer Gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN)"
   default     = 65000
-  nullable    = false
+  nullable    = true
 }
 
+variable "customer_gateway_bgp_asn_extended" {
+  type        = number
+  description = "The Customer Gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN)"
+  default     = null
+  nullable    = true
+}
 variable "customer_gateway_ip_address" {
   type        = string
   description = "The IP address of the Customer Gateway's Internet-routable external interface. Set to `null` to not create the Customer Gateway"
